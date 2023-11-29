@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		625053FF2B17A52E001705EE /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625053FE2B17A52E001705EE /* AuthResponse.swift */; };
+		625054022B17A5C8001705EE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625054012B17A5C8001705EE /* AuthService.swift */; };
+		625054042B17A8C5001705EE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625054032B17A8C5001705EE /* LoginViewModel.swift */; };
 		62A559C42B16559A0012996B /* GestionUserApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A559C32B16559A0012996B /* GestionUserApp.swift */; };
 		62A559C62B16559A0012996B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A559C52B16559A0012996B /* ContentView.swift */; };
 		62A559C82B16559B0012996B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62A559C72B16559B0012996B /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		625053FE2B17A52E001705EE /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		625054012B17A5C8001705EE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		625054032B17A8C5001705EE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		62A559C02B16559A0012996B /* GestionUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestionUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A559C32B16559A0012996B /* GestionUserApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionUserApp.swift; sourceTree = "<group>"; };
 		62A559C52B16559A0012996B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		625054002B17A5B7001705EE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				625054012B17A5C8001705EE /* AuthService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		62A559B72B16559A0012996B = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +79,7 @@
 		62A559C22B16559A0012996B /* GestionUser */ = {
 			isa = PBXGroup;
 			children = (
+				625054002B17A5B7001705EE /* Networking */,
 				62A559D52B1655D30012996B /* ViewModel */,
 				62A559D22B1655AA0012996B /* Model */,
 				62A559D12B1655A30012996B /* View */,
@@ -101,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				62A559D62B1655E20012996B /* User.swift */,
+				625053FE2B17A52E001705EE /* AuthResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,6 +124,7 @@
 		62A559D52B1655D30012996B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				625054032B17A8C5001705EE /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -140,7 +157,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					62A559BF2B16559A0012996B = {
 						CreatedOnToolsVersion = 14.2;
@@ -187,9 +204,12 @@
 				62A559C62B16559A0012996B /* ContentView.swift in Sources */,
 				62A559F32B166A020012996B /* ForgotPasswordView.swift in Sources */,
 				62A559C42B16559A0012996B /* GestionUserApp.swift in Sources */,
+				625054022B17A5C8001705EE /* AuthService.swift in Sources */,
 				62A559ED2B16601D0012996B /* Content-viewmodel.swift in Sources */,
 				62A559F12B1665440012996B /* RegisterView.swift in Sources */,
+				625054042B17A8C5001705EE /* LoginViewModel.swift in Sources */,
 				62A559EF2B16613B0012996B /* LoginView.swift in Sources */,
+				625053FF2B17A52E001705EE /* AuthResponse.swift in Sources */,
 				62A559D72B1655E20012996B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +253,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -293,6 +314,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
